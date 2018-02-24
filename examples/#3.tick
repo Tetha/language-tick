@@ -1,0 +1,12 @@
+var query = batch|query(
+  '''
+    select
+      last(messages) as messages,
+      last(messages_ready) as messages,
+      max(messages) as max_messages,
+      last(messages) - first(messages) as new_messages,
+      last(messages_ack) - first(messages_ack) as acked,
+      mean(messages_publish_rate) as publish_rate
+    from
+      "rabbitmq"."default"."rabbitmq_queue"
+  ''')

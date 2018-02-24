@@ -112,6 +112,17 @@
   'strings':
     'patterns': [
       {
+        'begin': '\'\'\''
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.definition.string.begin.tick'
+        'end': '\'\'\''
+        'endCaptures':
+          '0':
+            'name': 'punctuation.definition.string.end.tick'
+        'name': 'string.quoted.multiline.tick'
+      }
+      {
         'begin': '\''
         'beginCaptures':
           '0':
